@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body class="total">
+
+    <div class="sky">
+        <div class="mountains">
+            <div class="mountain-1"></div>
+            <div class="mountain-2"></div>
+            <div class="land-1"></div>
+            <div class="land-2"></div>
+            <div class="land-3"></div>
+        </div>
+        <div class="mountains-base"></div>
+        <div class="light-base"></div>
+        <div class="stars"></div>
+        <div class="stars-cross"></div>
+
+    </div>
+
+    <div class="main-box">
+        <div class="top">
+            <div class="searchbarparent">
+                <input type="text" id="city-input" placeholder="Enter city name" class="searchbar" />
+            </div>
+            <button onclick="fetchWeather()" class="searchbutton">
+                <div class="searchcol">Search City</div>
+            </button>
+        </div>
+        <div class="top-left">
+            <div class="time" id="time">Loading...</div>
+            <div class="thin-line"></div>
+            <div class="location">
+                <span class="material-symbols-outlined">location_on</span> <span id="location">Loading...</span>
+            </div>
+            <div class="thin-line"></div>
+            <div class="date" id="date">Loading...</div>
+        </div>
+
+        <div class="center">
+            <div class="temperature" id="temperature">Loading...</div>
+            <div class="description" id="description">Loading...</div>
+            <img id="weather-icon" alt="Weather Icon" />
+        </div>
+
+        <div class="bottom">
+            <div class="left-section">
+                <div class="box">
+                    <span class="material-symbols-outlined">thermometer</span> Temperature
+                </div>
+                <div class="value" id="temp">Loading...</div>
+                <div class="box">
+                    <span class="material-symbols-outlined">thermometer</span> Temperature Feel
+                </div>
+                <div class="value" id="feels-like">Loading...</div>
+            </div>
+
+            <div class="middle-section">
+                <div class="large-box" aria-label="Temperature Details">
+                    <div class="temp-detail">
+                        <div class="max-temp">
+                            Maximum Temperature <span class="material-symbols-outlined">thermometer_add</span>:
+                        </div>
+                        <div class="tempm" id="max-temp">Loading...</div>
+                    </div>
+                    <div class="temp-detail">
+                        <div class="min-temp">
+                            Minimum Temperature <span class="material-symbols-outlined">thermometer_minus</span>:
+                        </div>
+                        <div class="tempm" id="min-temp">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="box">
+                    <span class="material-symbols-outlined">humidity_percentage</span> Humidity
+                </div>
+                <div class="value" id="humidity">Loading...</div>
+                <div class="box">
+                    <span class="material-symbols-outlined">air</span> Wind speed
+                </div>
+                <div class="value" id="wind-speed">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="weather.js"></script>
+
+</html>
